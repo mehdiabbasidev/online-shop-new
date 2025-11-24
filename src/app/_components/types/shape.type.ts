@@ -1,0 +1,1 @@
+// export type Shape = "default" | "wide" | "square" | "pill" | "full" ;

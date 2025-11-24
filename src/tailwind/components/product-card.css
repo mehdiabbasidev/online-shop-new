@@ -1,0 +1,27 @@
+.product-card-wrapper {
+    @apply relative w-[250px] rounded-md border border-shop-gray-200 p-2.5 hover:border-shop-gray-600;
+    .card-tools {
+        @apply absolute right-6 hidden flex-col gap-2 group-hover:flex;
+    }
+    .product-card-image-box {
+        @apply p-5;
+        .product-image-wrapper {
+            @apply h-[200px] w-[200px];
+        }
+    }
+    .card-content {
+        @apply flex flex-col gap-2.5;
+        .product-card-description {
+            @apply line-clamp-2 text-sm;
+        }
+        .product-card-rate-wrapper {
+            @apply flex items-center justify-start;
+        }
+        .product-card-price-info {
+            @apply flex h-[60px] items-center gap-2 py-1;
+        }
+        .product-card-buy-button {
+            @apply hidden h-[60px] items-center justify-center rounded-md border border-shop-gray-400 px-4 text-center hover:bg-primary-950 hover:text-white;
+        }
+    }
+}

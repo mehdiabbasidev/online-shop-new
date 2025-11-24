@@ -1,0 +1,1 @@
+export type Spacing = "none" | "small" | "medium" | "large";

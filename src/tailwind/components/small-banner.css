@@ -1,0 +1,12 @@
+.small-banner-wrapper {
+    @apply mx-auto w-full max-w-[800px] bg-[url('/images/items/small-banner-1.png')] bg-cover bg-center bg-no-repeat py-5 text-center md:px-10 lg:px-28;
+    .small-banner-content {
+        @apply flex flex-col gap-2 p-4 text-start text-white;
+        .small-banner-off-title {
+            @apply text-xl font-bold leading-[26px];
+        }
+        .small-banner-off-content {
+            @apply text-md font-light leading-[24px];
+        }
+    }
+}

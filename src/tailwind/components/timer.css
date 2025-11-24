@@ -1,0 +1,15 @@
+.timer-wrapper {
+    @apply flex items-center gap-2;
+    .timer {
+        @apply flex flex-col;
+    }
+    .time {
+        @apply flex h-10 w-10 items-center justify-center rounded-md bg-warning-400 text-white;
+    }
+    .spreed {
+        @apply text-md font-bold text-shop-gray-900;
+    }
+    .timer-text {
+        @apply text-center text-xxs uppercase text-shop-gray-500;
+    }
+}

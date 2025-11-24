@@ -1,0 +1,21 @@
+.blog-card-wrapper {
+    @apply flex w-[319px] flex-col gap-y-3;
+    .blog-card-wrapper__img-box {
+        @apply relative h-[186px] w-[319px] rounded-md;
+        .blog-card-wrapper__img-box__img {
+            @apply h-full w-full rounded-md object-cover;
+        }
+    }
+
+    .blog-card-wrapper__title {
+        @apply text-wrap px-1 text-2xl text-shop-gray-900 hover:text-blue-600;
+    }
+    .blog-card-wrapper__date-wrapper {
+        @apply flex gap-5 {
+            @apply mr-30 text-xxs text-shop-gray-500;
+        }
+        .blog-card-wrapper__date-wrapper__last-visit {
+            @apply text-xxs text-shop-gray-500;
+        }
+    }
+}

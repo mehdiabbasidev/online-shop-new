@@ -1,0 +1,134 @@
+.input {
+    @apply w-80 h-8 py-3 m-1 px-1 bg-transparent leading-7 text-md border border-shop-gray-border rounded;
+    @apply placeholder:text-sm;
+    &--primary {
+        @apply border-primary-dark bg-primary-50 text-primary-800 placeholder:text-primary-400;
+        &:focus {
+            @apply focus:outline-none focus:border-primary-dark focus:border-2;
+        }
+        &:where(.input--icon) {
+            @apply pr-8; 
+        }
+        &[disabled],
+        &:disabled {
+            @apply disabled:cursor-not-allowed disabled:bg-primary-disabled disabled:placeholder:text-primary-300 disabled:border-primary-300 disabled:hover:bg-primary-disabled;
+        }
+    }
+    &--secondary {
+        @apply border-secondary-dark bg-secondary-50 text-secondary-800 placeholder:text-secondary-400;
+        &:focus {
+            @apply focus:outline-none focus:border-secondary-dark focus:border-2;
+        }
+        &:where(.input--icon) {
+            @apply pr-8;
+        }
+        &[disabled],
+        &:disabled {
+            @apply disabled:cursor-not-allowed disabled:bg-secondary-disabled disabled:placeholder:text-secondary-300 disabled:border-secondary-300 disabled:hover:bg-secondary-disabled;
+        }
+    }
+    &--success {
+        @apply border-success-dark bg-success-50 text-success-800 placeholder:text-success-400;
+        &:focus {
+            @apply focus:outline-none focus:border-success-dark focus:border-2;
+        }
+        &:where(.input--icon) {
+            @apply pr-8;
+        }
+        &[disabled],
+        &:disabled {
+            @apply disabled:cursor-not-allowed disabled:bg-success-disabled disabled:placeholder:text-success-300 disabled:border-success-300 disabled:hover:bg-success-disabled;
+        }
+    }
+    &--danger {
+        @apply border-danger-dark bg-danger-50 text-danger-800 placeholder:text-danger-400;
+        &:focus {
+            @apply focus:outline-none focus:border-danger-dark focus:border-2;
+        }
+        &:where(.input--icon) {
+            @apply pr-8;
+        }
+        &[disabled],
+        &:disabled {
+            @apply disabled:cursor-not-allowed disabled:bg-danger-disabled disabled:placeholder:text-danger-300 disabled:border-danger-300 disabled:hover:bg-danger-disabled;
+        }
+    }
+    &--warning {
+        @apply border-warning-dark bg-warning-50 text-warning-800 placeholder:text-warning-400;
+        &:focus {
+            @apply focus:outline-none focus:border-warning-dark focus:border-2;
+        }
+        &:where(.input--icon) {
+            @apply pr-8;
+        }
+        &[disabled],
+        &:disabled {
+            @apply disabled:cursor-not-allowed disabled:bg-warning-disabled disabled:placeholder:text-warning-300 disabled:border-warning-300 disabled:hover:bg-warning-disabled;
+        } 
+    }
+    &--info {
+        @apply border-info-dark bg-info-50 text-info-800 placeholder:text-info-400;
+        &:focus {
+            @apply focus:outline-none focus:border-info-dark focus:border-2;
+        }
+        &:where(.input--icon) {
+            @apply pr-8;
+        }
+        &[disabled],
+        &:disabled {
+            @apply disabled:cursor-not-allowed disabled:bg-info-disabled disabled:placeholder:text-info-300 disabled:border-info-300 disabled:hover:bg-info-disabled;
+        }
+    }
+    &--label {
+        @apply text-shop-gray-1100 mx-1;
+    }
+    
+    /* Size Type (small,medium,large,extra-large)*/
+    &--xs {
+        @apply w-40 h-7 py-1 rounded-sm;
+    }
+    &--sm {
+        @apply w-60 h-9 py-2 rounded;
+    }
+    &--md {
+        @apply w-80 h-11 py-3 rounded-md;
+    }
+    &--lg {
+        @apply w-96 h-14 py-4 rounded-lg;
+    }
+    &--xl {
+        @apply w-[500px] h-16 py-5 rounded-xl;
+    }
+    /* End Size Type*/
+    /* Shape Type (default,rounded,square,circle,full)*/
+    &--wide {
+        @apply w-64;
+        &:where(.input--xs) {
+            @apply w-40;
+        }
+        &:where(.input--sm) {
+            @apply w-56;
+        }
+        &:where(.input--lg) {
+            @apply w-80;
+        }
+        &:where(.input--xl) {
+            @apply w-96;
+        }
+    }
+    &--pill {
+        @apply rounded-full;
+    }
+    &--full {
+        @apply w-full flex-nowrap;
+    }
+    /* End Shape Type */
+    /* Helper Text */
+    &--iconhelpertext{
+        @apply inline-block w-5 h-5 bg-shop-gray-400 text-shop-white text-sm rounded-full text-center cursor-pointer;
+    }
+    &--helpertext{
+        @apply hidden  group-hover:inline-block text-xs text-shop-gray-400 mx-1
+    }
+    /* End Helper Text */
+}

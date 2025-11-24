@@ -1,0 +1,1 @@
+export type FontWeight ="thin" | "light" | "regular" | "medium" | "bold" | "extra-bold" ;

@@ -1,0 +1,21 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+@import "../tailwind/components_style.css";
+
+html {
+    font-family: var(--font-local-iranSans);
+}
+
+:lang("en") {
+    font-family: var(--font-google-inter);
+}
+
+@layer utilities {
+    .container-fluid {
+        @apply px-2 md:px-4;
+    }
+    .containerD {
+        @apply mx-auto w-full min-w-[326px] [@media(min-width:1400px)]:min-w-[1336px] [@media(min-width:1400px)]:max-w-[1336px];
+    }
+}

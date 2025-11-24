@@ -1,0 +1,20 @@
+.big-banner-wrapper {
+    @apply mx-auto w-full bg-[url('/images/items/banner-2.png')] bg-cover bg-center bg-no-repeat px-5 py-10;
+    .big-banner-container {
+        @apply containerD flex flex-col items-center justify-center gap-8 px-2 py-4 text-start text-white lg:flex-row;
+        .big-banner-content-box {
+            .big-banner-title {
+                @apply text-[32px] font-bold leading-[41px];
+            }
+            .big-banner-subtitle {
+                @apply text-[20px] font-[400] leading-[28px];
+            }
+        }
+         .box-form-newsletter {
+            @apply rounded-md bg-white pl-2 pr-0 text-black;
+            .input-newsletter {
+                @apply border-none text-[12px] font-[400] leading-[18px] outline-none;
+            }
+        } 
+    }
+}

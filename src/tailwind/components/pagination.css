@@ -1,0 +1,5 @@
+.pagination {
+    .pagination-list {
+        @apply flex justify-center gap-2 font-normal leading-[18px] text-[#425A8B];
+    }
+}

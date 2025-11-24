@@ -1,0 +1,283 @@
+/* Custom CSS for Button Component with Tailwind and Nesting */
+
+.btn {
+  @apply w-24 h-8 px-4 py-2 m-1 rounded inline-flex justify-center items-center font-medium cursor-pointer;
+
+  &[disabled],
+  &:disabled {
+    @apply disabled:cursor-not-allowed disabled:bg-gray-200 disabled:text-white disabled:hover:bg-shop-disabled;
+  }
+
+  /* Variant Types and State Types*/
+
+  &--primary {
+    &:where(.btn--default) {
+      @apply bg-primary text-white;
+
+      &:hover {
+        @apply hover:bg-primary-dark hover:text-white
+      }
+    }
+
+    &:where(.btn--outline) {
+      @apply border border-primary text-primary;
+
+      &:hover {
+        @apply hover:bg-primary hover:text-white
+      }
+    }
+
+    &:where(.btn--link) {
+      @apply text-primary bg-transparent;
+
+      &:hover {
+        @apply hover:text-primary hover:bg-transparent hover:underline;
+      }
+    }
+
+    &[disabled],
+    &:disabled {
+      @apply disabled:cursor-not-allowed disabled:bg-primary-disabled disabled:text-white disabled:hover:bg-primary-disabled;
+    }
+  }
+
+  &--secondary {
+    &:where(.btn--default) {
+      @apply bg-secondary text-white;
+
+      &:hover {
+        @apply hover:bg-secondary-dark hover:text-white
+      }
+    }
+
+    &:where(.btn--outline) {
+      @apply border border-secondary text-secondary;
+
+      &:hover {
+        @apply hover:bg-secondary hover:text-white
+      }
+    }
+
+    &:where(.btn--link) {
+      @apply text-secondary bg-transparent;
+
+      &:hover {
+        @apply hover:text-secondary hover:bg-transparent hover:underline;
+      }
+    }
+
+    &[disabled],
+    &:disabled {
+      @apply disabled:cursor-not-allowed disabled:bg-secondary-disabled disabled:text-white disabled:hover:bg-secondary-disabled;
+    }
+  }
+
+  &--success {
+    &:where(.btn--default) {
+      @apply bg-success text-white;
+
+      &:hover {
+        @apply hover:bg-success-dark hover:text-white
+      }
+    }
+
+    &:where(.btn--outline) {
+      @apply border border-success text-success;
+
+      &:hover {
+        @apply hover:bg-success hover:text-white
+      }
+    }
+
+    &:where(.btn--link) {
+      @apply text-success bg-transparent;
+
+      &:hover {
+        @apply hover:text-success hover:bg-transparent hover:underline;
+      }
+    }
+
+    &[disabled],
+    &:disabled {
+      @apply disabled:cursor-not-allowed disabled:bg-success-disabled disabled:text-white disabled:hover:bg-success-disabled;
+    }
+  }
+
+  &--danger {
+    &:where(.btn--default) {
+      @apply bg-danger text-white;
+
+      &:hover {
+        @apply hover:bg-danger-dark hover:text-white
+      }
+    }
+
+    &:where(.btn--outline) {
+      @apply border border-danger text-danger;
+
+      &:hover {
+        @apply hover:bg-danger hover:text-white
+      }
+    }
+
+    &:where(.btn--link) {
+      @apply text-danger bg-transparent;
+
+      &:hover {
+        @apply hover:text-danger hover:bg-transparent hover:underline;
+      }
+    }
+
+    &[disabled],
+    &:disabled {
+      @apply disabled:cursor-not-allowed disabled:bg-danger-disabled disabled:text-white disabled:hover:bg-danger-disabled;
+    }
+  }
+
+  &--warning {
+    &:where(.btn--default) {
+      @apply bg-warning text-white;
+
+      &:hover {
+        @apply hover:bg-warning-dark hover:text-white
+      }
+    }
+
+    &:where(.btn--outline) {
+      @apply border border-warning text-warning;
+
+      &:hover {
+        @apply hover:bg-warning hover:text-white
+      }
+    }
+
+    &:where(.btn--link) {
+      @apply text-warning bg-transparent;
+
+      &:hover {
+        @apply hover:text-warning hover:bg-transparent hover:underline;
+      }
+    }
+
+    &[disabled],
+    &:disabled {
+      @apply disabled:cursor-not-allowed disabled:bg-warning-disabled disabled:text-white disabled:hover:bg-warning-disabled;
+    }
+  }
+
+  &--info {
+    &:where(.btn--default) {
+      @apply bg-info text-white;
+
+      &:hover {
+        @apply hover:bg-info-dark hover:text-white
+      }
+    }
+
+    &:where(.btn--outline) {
+      @apply border border-info text-info;
+
+      &:hover {
+        @apply hover:bg-info hover:text-white
+      }
+    }
+
+    &:where(.btn--link) {
+      @apply text-info bg-transparent;
+
+      &:hover {
+        @apply hover:text-info hover:bg-transparent hover:underline;
+      }
+    }
+
+    &[disabled],
+    &:disabled {
+      @apply disabled:cursor-not-allowed disabled:bg-info-disabled disabled:text-white disabled:hover:bg-info-disabled;
+    }
+  }
+
+  /* End Variant Types */
+
+
+  /* Size Type (small,medium,large,extra-large)*/
+  &--xs {
+    @apply h-6 px-2 text-xs rounded-sm;
+  }
+
+  &--sm {
+    @apply h-8 px-3 text-sm rounded;
+  }
+
+  &--md {
+    @apply h-12 px-4 text-md rounded-md;
+  }
+
+  &--lg {
+    @apply h-14 px-6 text-lg rounded-lg;
+  }
+
+  &--xl {
+    @apply h-16 px-8 text-xl rounded-xl;
+    font-size: 1.250rem;
+  }
+
+  /* End Size Type*/
+
+
+  /* Shape Type (default,rounded,square,circle,full)*/
+  &--wide {
+    @apply w-52;
+    &:where(.btn--xs) {
+      @apply w-44;
+    }
+
+    &:where(.btn--sm) {
+      @apply w-48;
+    }
+
+    &:where(.btn--lg) {
+      @apply w-64;
+    }
+
+    &:where(.btn--xl) {
+      @apply w-72;
+    }
+  }
+
+
+
+  &--square {
+    @apply h-12 w-12 p-0;
+
+    &:where(.btn--xs) {
+      @apply h-6 w-6 p-0;
+    }
+
+    &:where(.btn--sm) {
+      @apply h-8 w-8 p-0;
+    }
+
+    &:where(.btn--lg) {
+      @apply h-16 w-16 p-0;
+    }
+
+    &:where(.btn--xl) {
+      @apply h-20 w-20 p-0;
+    }
+  }
+
+  &--pill {
+    @apply rounded-full;
+  }
+
+  &--full {
+    @apply w-full flex-nowrap;
+  }
+
+  /* End Shape Type*/
+
+
+  &--loading {
+    @apply animate-spin w-4 h-4 mx-1 border-[3px] border-current border-t-transparent text-white rounded-full
+  }
+}

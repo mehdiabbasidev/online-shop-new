@@ -1,0 +1,42 @@
+import { BLOGS_PER_PAGE } from '@/configs/itemsPerPage';
+import { BlogsData } from '@/data/blogs.data';
+import { BreadCrumbItem } from '../_components/bread-crumbs/bread-crumbs.types';
+import AllBlogs from '../_components/features/blogs/all-blogs/all-blogs';
+import BigBanner from '../_components/sections/big-banner/big-banner';
+import BreadCrumbs from '../_components/ui/bread-crumbs/bread-crumbs';
+import Pagination from '../_components/ui/pagination/pagination';
+
+export default function Blog({ searchParams }: { searchParams: Record<string, string | string[] | undefined> }) {
+
+
+    const breadcrumbItems: BreadCrumbItem[] = [
+        { label: "Home", url: "/" },
+        { label: "blog", url: "/blog" }
+    ];
+    const blogsPerPage = BLOGS_PER_PAGE
+    const activePage = Number(searchParams.page) || 1;
+    const startIndex = (activePage - 1) * blogsPerPage;
+    const endIndex = startIndex + blogsPerPage;
+    const visibleBlogs = BlogsData.slice(startIndex, endIndex);
+
+
+    return (
+        <>
+            <section>
+                <BreadCrumbs items={breadcrumbItems} />
+            </section>
+
+            <section>
+                <AllBlogs visibleBlogs={visibleBlogs} />
+            </section>
+
+            <section className="containerD my-6 p-2">
+                <Pagination totalItems={BlogsData.length} activePage={activePage} itemPerPage={blogsPerPage} />
+            </section>
+
+            <section className="!mx-0 !w-full bg-green-200 !px-0">
+                <BigBanner />
+            </section>
+        </>
+    )
+}

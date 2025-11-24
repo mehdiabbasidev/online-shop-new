@@ -1,0 +1,15 @@
+.header-icons-wrapper {
+    @apply flex gap-4 pt-5;
+    .header-icons {
+        @apply flex items-center gap-2;
+        .header-icons-link {
+            @apply gap-2 text-shop-gray-900 hover:text-blue-400 lg:inline-flex;
+            .header-icons-link__badge {
+                @apply absolute -right-2 -top-3 flex size-5 items-center justify-center rounded-full bg-orange-400 text-sm text-white;
+            }
+            .header-icons-text {
+                @apply hidden ;
+            }
+        }
+    }
+}

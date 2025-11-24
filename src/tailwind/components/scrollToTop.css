@@ -1,0 +1,12 @@
+.button,
+.buttonVisible {
+    @apply  fixed bottom-24 right-4 z-[999] hidden size-8 cursor-pointer items-center justify-center rounded-full bg-shop-gray-600 text-md font-semibold text-white opacity-0 outline-none md:flex;
+
+    transition-duration: 200ms;
+    transition-property: opacity;
+    transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.buttonVisible {
+    opacity: 1 !important;
+}

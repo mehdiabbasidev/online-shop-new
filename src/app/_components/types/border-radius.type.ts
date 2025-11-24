@@ -1,0 +1,1 @@
+export type BorderRadius = "none" | "small" | "medium" | "large";

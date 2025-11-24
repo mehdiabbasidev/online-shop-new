@@ -1,0 +1,13 @@
+@import "./components/input.css";
+@import "./components/button.css";
+@import "./components/header.css";
+@import "./components/header-icons.css";
+@import "./components/attribute.css";
+@import "./components/timer.css";
+@import "./components/product-card.css";
+@import "./components/small-banner.css";
+@import "./components/blog-card.css";
+@import "./components/big-banner.css";
+@import "./components/scrollToTop.css";
+@import "./components/bread-crumbs.css";
+@import "./components/pagination.css";

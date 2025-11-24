@@ -1,0 +1,1 @@
+export type Color="gray" | "green" | "yellow" | "pink" | "blue" | "sunYellow" | "brown" | "purple" | "other" ;

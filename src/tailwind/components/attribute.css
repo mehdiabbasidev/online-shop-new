@@ -1,0 +1,47 @@
+.attribute-wrapper {
+    @apply flex flex-wrap justify-center gap-4 lg:flex-nowrap;
+    .left-box-wrapper {
+        @apply flex min-h-[400px] w-1/2 min-w-[350px] flex-col gap-4 rounded bg-danger-50 p-12;
+        .left-box-wrapper__lable {
+            @apply text-md font-bold text-warning-400;
+        }
+        .left-box-wrapper__title {
+            @apply mb-0 font-sans text-3xl font-bold text-gray-800;
+        }
+        .left-box-wrapper__options {
+            @apply mt-0 list-disc;
+        }
+        .left-box-wrapper__options__item {
+            @apply text-sm text-shop-gray-900;
+        }
+        .left-box-wrapper__shop-btn {
+            @apply flex items-center gap-3;
+        }
+        .left-box-wrapper__more {
+            @apply text-shop-gray-500;
+        }
+    }
+    .right-box-wrapper {
+        @apply flex min-h-[400px] w-1/2 min-w-[350px] rounded bg-danger-50 p-12;
+    }
+    .right-box {
+        @apply flex flex-col gap-4;
+    }
+    .right-box__lable {
+        @apply text-md font-bold text-warning-400;
+    }
+    .right-box__title {
+        @apply mb-0 font-sans text-3xl font-bold text-gray-800;
+    }
+    .right-box__subtitle {
+        @apply text-sm text-shop-gray-500;
+    }
+
+    .right-box__img {
+        @apply hidden self-end md:flex;
+    }
+    .btn-style {
+        background-color: #5bc694;
+        @apply rounded px-2.5 py-[22px] text-xxs font-normal md:text-md;
+    }
+}
