@@ -1,10 +1,35 @@
 import { BLOGS_PER_PAGE } from '@/configs/itemsPerPage';
 import { BlogsData } from '@/data/blogs.data';
-import { BreadCrumbItem } from '../_components/bread-crumbs/bread-crumbs.types';
+
+import { BreadCrumbItem } from '../_components/ui/bread-crumbs/bread-crumbs.types';
 import AllBlogs from '../_components/features/blogs/all-blogs/all-blogs';
 import BigBanner from '../_components/sections/big-banner/big-banner';
 import BreadCrumbs from '../_components/ui/bread-crumbs/bread-crumbs';
 import Pagination from '../_components/ui/pagination/pagination';
+import { Metadata } from 'next';
+
+export function generateMetadata(): Metadata {
+  const title = "مقالات";
+  const image = "http://localhost:3000/_next/image?url=%2Fimages%2Fblog-img%2Fblog-0.jpg&w=3840&q=75"; 
+
+  const og = `/api/og?title=${encodeURIComponent(title)}&image=${encodeURIComponent(
+    image
+  )}`;
+
+  return {
+    title,
+    openGraph: {
+      title,
+      images: [{ url: og, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      images: [og],
+    },
+  };
+}
+
 
 export default function Blog({ searchParams }: { searchParams: Record<string, string | string[] | undefined> }) {
 

@@ -1,35 +1,28 @@
-"use client";
+import type { Metadata } from "next";
+import ProductsClient from "./ProductsClient";
 
-import { ProductListData } from "@/data/products.data";
-import { useSearchParams } from "next/navigation";
-import { useState } from "react";
-import FilterToolbar from "../_components/features/filter-toolbar/filter-toolbar";
-import FilteredProductsGridView from "../_components/features/products/filtered-products/filtered-products-grid-view";
-import FilteredProductsListView from "../_components/features/products/filtered-products/filtered-products-list-view";
-import Pagination from "../_components/ui/pagination/pagination";
+export function generateMetadata(): Metadata {
+  const title = "محصولات";
+  const image = "http://localhost:3000/_next/image?url=%2Fimages%2Fproducts%2FHuawei-Watch-GT-4-46mm.jpg&w=640&q=75";
 
-export default function Products() {
-  const sp = useSearchParams();
-  const [view, setView] = useState<"grid" | "list">("grid");
+  const og = `/api/og?title=${encodeURIComponent(title)}&image=${encodeURIComponent(
+    image
+  )}`;
 
-  return (
-    <div>
-      <section>
-        <FilterToolbar view={view} setView={setView}/>
-      </section>
-      
-      <section className="containerD my-4 p-2">
-        {
-        view === "grid" ? (
-          <FilteredProductsGridView key={1} products={ProductListData} />
-        ) : (
-          <FilteredProductsListView key={2} products={ProductListData} />
-        )}
-      </section>
+  return {
+    title,
+    openGraph: {
+      title,
+      images: [{ url: og, width: 1200, height: 630, alt: title }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title,
+      images: [og],
+    },
+  };
+}
 
-      <section className="containerD my-6 p-2">
-        <Pagination/>
-      </section>
-    </div>
-  );
+export default function ProductsPage() {
+  return <ProductsClient />;
 }
