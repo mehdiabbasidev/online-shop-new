@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import React from 'react'
 
-import { ISpecialOffersBannerItem } from '@/app/_components/special-offers-banner/special-offers-banner-item/special-offers-banner-item.types';
+import { ISpecialOffersBannerItem } from '@/app/_components/sections/special-offers-banner/special-offers-banner-item/special-offers-banner-item.types';
 import { Button } from '@/app/_components/ui/button';
 
 

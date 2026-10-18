@@ -1,16 +1,18 @@
 "use client";
 
-import React, { useMemo } from "react";
 import Link from "next/link";
 import { usePathname, useSearchParams } from "next/navigation";
-import { useProductQueryParams } from "@/hooks/useProductQueryParams";
-import { ProductListData } from "@/data/products.data"; // ← یا هر دیتایی که داری
+// import { useProductQueryParams } from "@/hooks/useProductQueryParams";
+// import { ProductListData } from "@/data/products.data"; // ← یا هر دیتایی که داری
+import { PaginationProps } from "./pagination.types";
 
-const Pagination: React.FC = () => {
+// const Pagination: React.FC = () => {
+const Pagination: React.FC<PaginationProps> = ({ totalItems, activePage, itemPerPage }) => {
   const pathname = usePathname();
   const searchParams = useSearchParams();
 
-  const { page: activePage, totalPages } = useProductQueryParams(ProductListData);
+  // const { page: activePage, totalPages } = useProductQueryParams(ProductListData);
+  const totalPages = Math.max(1, Math.ceil(totalItems / itemPerPage));
 
   if (totalPages <= 1) return null;
 

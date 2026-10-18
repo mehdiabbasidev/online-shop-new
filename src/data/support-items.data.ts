@@ -1,4 +1,4 @@
-import { ISupportItem } from "@/app/_components/support/support-item/support-item.types";
+import { ISupportItem } from "@/app/_components/features/support/support-item/support-item.types";
 
 export const supportItemsData:ISupportItem[]= [
     {

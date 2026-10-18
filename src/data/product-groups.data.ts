@@ -1,4 +1,4 @@
-import { IProductGroup } from "@/app/_components/products/product-groups/product-group/product-group.types";
+import { IProductGroup } from "@/app/_components/features/products/product-groups/product-group/product-group.types";
 
 export const productsGroups:IProductGroup[]  = [
     

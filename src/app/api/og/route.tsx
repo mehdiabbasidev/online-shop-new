@@ -55,6 +55,7 @@ export async function GET(req: Request) {
         >
           {bgDataUrl ? (
             <img
+              alt=""
               src={bgDataUrl}
               width={1200}
               height={630}

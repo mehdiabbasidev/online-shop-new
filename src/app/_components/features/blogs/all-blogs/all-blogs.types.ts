@@ -1,5 +1,5 @@
-import { IBlogCardProp } from "../blog-card/blog-card.types";
+import { IBlogCardProps } from "../blog-card/blog-card.types";
 
 export interface AllBlogsProps {
-    visibleBlogs: IBlogCardProp[];
+    visibleBlogs: IBlogCardProps[];
 }

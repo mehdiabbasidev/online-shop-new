@@ -1,4 +1,4 @@
-import { IBlogCardProps } from "@/app/_components/blogs/blog-card/blog-card.types";
+import { IBlogCardProps } from "@/app/_components/features/blogs/blog-card/blog-card.types";
 
 export const BlogsData :IBlogCardProps[]= [
   {

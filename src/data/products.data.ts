@@ -1,6 +1,9 @@
-import { IProductGridCard } from "@/app/_components/features/products/product-card/product-grid-card/product-grid-card.types";
+// import { IProductGridCard } from "@/app/_components/features/products/product-card/product-grid-card/product-grid-card.types";
+// export const ProductListData: IProductGridCard[] = [
 
-export const ProductListData: IProductGridCard[] = [
+import { Product } from "@/types/product.types";
+
+export const ProductListData: Product[] = [
   {
     product_id: "1",
     title: "Apple iPhone 15 Pro Max 256GB",

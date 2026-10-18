@@ -1,4 +1,4 @@
-import { IBlogDetailsProps } from "@/app/_components/blogs/blog-details/blog-details.types";
+import { IBlogDetailsProps } from "@/app/_components/features/blogs/blog-details/blog-details.types";
 
 const testBlogs :IBlogDetailsProps[]=  [
     {

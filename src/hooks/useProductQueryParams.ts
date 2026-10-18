@@ -1,6 +1,8 @@
 "use client";
 import { PRODUCTS_PER_PAGE } from "@/configs/itemsPerPage";
-import { Product } from "@/data/products.types";
+import { Product } from "@/types/product.types";
+// import { Product } from "@/data/products.types";
+
 import { low, parseCSV, toNum, toNumOrUndef } from "@/utils/helper";
 import { useSearchParams } from "next/navigation";
 

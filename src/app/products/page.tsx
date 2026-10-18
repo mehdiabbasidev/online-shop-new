@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import ProductsClient from "./ProductsClient";
+import { Suspense } from "react";
 
 export function generateMetadata(): Metadata {
   const title = "محصولات";
@@ -23,6 +24,15 @@ export function generateMetadata(): Metadata {
   };
 }
 
+// export default function ProductsPage() {
+//   return <ProductsClient />;
+// }
+
+
 export default function ProductsPage() {
-  return <ProductsClient />;
+  return (
+    <Suspense fallback={<div className="containerD my-6 p-2">در حال بارگذاری...</div>}>
+      <ProductsClient />
+    </Suspense>
+  );
 }

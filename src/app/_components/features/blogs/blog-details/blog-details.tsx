@@ -1,8 +1,10 @@
 import Image from "next/image";
 import { FC } from "react";
 import { IBlogDetailsProps } from "./blog-details.types";
-import Tag from "../../tag/tag";
-import Author from "../../author/author";
+
+import Tag from "@/app/_components/ui/tag/tag"
+// import Author from "../author/author";
+import Author from "@/app/_components/features/blogs/author/author";
 
 export const BlogDetailsComponent: FC<IBlogDetailsProps> = (props) => {
     const {  srcImage, label, title, content, readingTime, author } = props;

@@ -1,3 +1,6 @@
+import { useSearchParams } from "next/navigation"
+
+
 export default function SelectedFilterModal({
   searchParams,
   toggleCSV,
