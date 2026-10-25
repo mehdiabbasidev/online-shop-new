@@ -1,10 +1,10 @@
 .input {
-    @apply w-80 h-8 py-3 m-1 px-1 bg-transparent leading-7 text-md border border-shop-gray-border rounded;
+    @apply w-80 h-8 py-3 m-1 px-1 bg-transparent leading-7 text-md border border-shop-gray-border rounded-sm;
     @apply placeholder:text-sm;
     &--primary {
         @apply border-primary-dark bg-primary-50 text-primary-800 placeholder:text-primary-400;
         &:focus {
-            @apply focus:outline-none focus:border-primary-dark focus:border-2;
+            @apply focus:outline-hidden focus:border-primary-dark focus:border-2;
         }
         &:where(.input--icon) {
             @apply pr-8; 
@@ -17,7 +17,7 @@
     &--secondary {
         @apply border-secondary-dark bg-secondary-50 text-secondary-800 placeholder:text-secondary-400;
         &:focus {
-            @apply focus:outline-none focus:border-secondary-dark focus:border-2;
+            @apply focus:outline-hidden focus:border-secondary-dark focus:border-2;
         }
         &:where(.input--icon) {
             @apply pr-8;
@@ -30,7 +30,7 @@
     &--success {
         @apply border-success-dark bg-success-50 text-success-800 placeholder:text-success-400;
         &:focus {
-            @apply focus:outline-none focus:border-success-dark focus:border-2;
+            @apply focus:outline-hidden focus:border-success-dark focus:border-2;
         }
         &:where(.input--icon) {
             @apply pr-8;
@@ -43,7 +43,7 @@
     &--danger {
         @apply border-danger-dark bg-danger-50 text-danger-800 placeholder:text-danger-400;
         &:focus {
-            @apply focus:outline-none focus:border-danger-dark focus:border-2;
+            @apply focus:outline-hidden focus:border-danger-dark focus:border-2;
         }
         &:where(.input--icon) {
             @apply pr-8;
@@ -56,7 +56,7 @@
     &--warning {
         @apply border-warning-dark bg-warning-50 text-warning-800 placeholder:text-warning-400;
         &:focus {
-            @apply focus:outline-none focus:border-warning-dark focus:border-2;
+            @apply focus:outline-hidden focus:border-warning-dark focus:border-2;
         }
         &:where(.input--icon) {
             @apply pr-8;
@@ -69,7 +69,7 @@
     &--info {
         @apply border-info-dark bg-info-50 text-info-800 placeholder:text-info-400;
         &:focus {
-            @apply focus:outline-none focus:border-info-dark focus:border-2;
+            @apply focus:outline-hidden focus:border-info-dark focus:border-2;
         }
         &:where(.input--icon) {
             @apply pr-8;
@@ -85,10 +85,10 @@
     
     /* Size Type (small,medium,large,extra-large)*/
     &--xs {
-        @apply w-40 h-7 py-1 rounded-sm;
+        @apply w-40 h-7 py-1 rounded-xs;
     }
     &--sm {
-        @apply w-60 h-9 py-2 rounded;
+        @apply w-60 h-9 py-2 rounded-sm;
     }
     &--md {
         @apply w-80 h-11 py-3 rounded-md;

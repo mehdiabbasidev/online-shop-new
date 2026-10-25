@@ -11,9 +11,7 @@
         @apply text-wrap px-1 text-2xl text-shop-gray-900 hover:text-blue-600;
     }
     .blog-card-wrapper__date-wrapper {
-        @apply flex gap-5 {
-            @apply mr-30 text-xxs text-shop-gray-500;
-        }
+        @apply flex gap-5;
         .blog-card-wrapper__date-wrapper__last-visit {
             @apply text-xxs text-shop-gray-500;
         }

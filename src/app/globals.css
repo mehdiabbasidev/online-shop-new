@@ -1,21 +1,214 @@
-@import "tailwindcss/base";
-@import "tailwindcss/components";
-@import "tailwindcss/utilities";
-@import "../tailwind/components_style.css";
+@import 'tailwindcss';
+@import '../tailwind/components_style.css' layer(utilities);
 
-html {
-    font-family: var(--font-local-iranSans);
+@theme {
+  --text-*: initial;
+  --text-3xs: 10px;
+  --text-xxs: 12px;
+  --text-xs: 13px;
+  --text-sm: 14px;
+  --text-md: 16px;
+  --text-md-2: 15px;
+  --text-lg: 18px;
+  --text-xl: 20px;
+  --text-2xl: 22px;
+  --text-3xl: 58px;
+
+  --shadow-*: initial;
+  --shadow-1: 14px 14px 36px rgba(153, 153, 153, 0.22);
+  --shadow-2: 0px 45px 80px rgba(0, 0, 0, 0.04);
+  --shadow-3: 0px 47px 65px rgba(21, 28, 38, 0.1);
+  --shadow-4: 4px 6px 23px rgba(228, 92, 35, 0.1);
+  --shadow-5: 4px 4px 40px rgba(16, 24, 40, 0.1);
+  --shadow-6: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  --shadow-inner: inset 0px 40px 80px #fcfcfc;
+
+  --color-primary-50: #f0f9ff;
+  --color-primary-100: #e1f2fd;
+  --color-primary-200: #bbe7fc;
+  --color-primary-300: #7fd3fa;
+  --color-primary-400: #3cbef4;
+  --color-primary-500: #1aaeed;
+  --color-primary-600: #0685c3;
+  --color-primary-700: #066a9e;
+  --color-primary-800: #095983;
+  --color-primary-900: #0e4b6c;
+  --color-primary-950: #093048;
+  --color-primary: #1aaeed;
+  --color-primary-disabled: #bbe7fc;
+  --color-primary-light: #7fd3fa;
+  --color-primary-dark: #066a9e;
+
+  --color-secondary-50: #f5f6f8;
+  --color-secondary-100: #ecf1f3;
+  --color-secondary-200: #dce4e9;
+  --color-secondary-300: #c7d2da;
+  --color-secondary-400: #afbdca;
+  --color-secondary-500: #9aa8ba;
+  --color-secondary-600: #8d99ae;
+  --color-secondary-700: #717c91;
+  --color-secondary-800: #5d6776;
+  --color-secondary-900: #4e5561;
+  --color-secondary-950: #2e3238;
+  --color-secondary: #9aa8ba;
+  --color-secondary-disabled: #f5f6f8;
+  --color-secondary-light: #c7d2da;
+  --color-secondary-dark: #717c91;
+
+  --color-success-50: #eefbf4;
+  --color-success-100: #d6f5e2;
+  --color-success-200: #b0eac9;
+  --color-success-300: #7dd8ab;
+  --color-success-400: #5bc694;
+  --color-success-500: #25a46d;
+  --color-success-600: #178457;
+  --color-success-700: #126a48;
+  --color-success-800: #11543a;
+  --color-success-900: #0f4531;
+  --color-success-950: #07271c;
+  --color-success: #25a46d;
+  --color-success-disabled: #b0eac9;
+  --color-success-light: #7dd8ab;
+  --color-success-dark: #126a48;
+
+  --color-danger-50: #fff1f2;
+  --color-danger-100: #ffe4e6;
+  --color-danger-200: #fecdd3;
+  --color-danger-300: #fea3af;
+  --color-danger-400: #fc7085;
+  --color-danger-500: #f53658;
+  --color-danger-600: #e21c48;
+  --color-danger-700: #bf113c;
+  --color-danger-800: #a0113a;
+  --color-danger-900: #891238;
+  --color-danger-950: #4d0419;
+  --color-danger: #f53658;
+  --color-danger-disabled: #fecdd3;
+  --color-danger-light: #fea3af;
+  --color-danger-dark: #bf113c;
+
+  --color-warning-50: #fff6ed;
+  --color-warning-100: #ffecd4;
+  --color-warning-200: #ffd4a9;
+  --color-warning-300: #ffb067;
+  --color-warning-400: #fe8c39;
+  --color-warning-500: #fc6b13;
+  --color-warning-600: #ed5009;
+  --color-warning-700: #c53a09;
+  --color-warning-800: #9c2f10;
+  --color-warning-900: #7e2910;
+  --color-warning-950: #441206;
+  --color-warning: #ffb067;
+  --color-warning-disabled: #ffd4a9;
+  --color-warning-light: #ffd4a9;
+  --color-warning-dark: #ed5009;
+
+  --color-info-50: #eefbfd;
+  --color-info-100: #d4f4f9;
+  --color-info-200: #aee9f3;
+  --color-info-300: #76d7ea;
+  --color-info-400: #27b3d2;
+  --color-info-500: #1a9fc0;
+  --color-info-600: #1980a1;
+  --color-info-700: #1b6883;
+  --color-info-800: #1f556b;
+  --color-info-900: #1e485b;
+  --color-info-950: #0e2e3e;
+  --color-info: #27b3d2;
+  --color-info-disabled: #aee9f3;
+  --color-info-light: #76d7ea;
+  --color-info-dark: #1980a1;
+
+  --color-shop-gray-50: #f0f3f8;
+  --color-shop-gray-100: #dde4f0;
+  --color-shop-gray-200: #cad6ec;
+  --color-shop-gray-300: #b2c2e1;
+  --color-shop-gray-400: #9eb4e0;
+  --color-shop-gray-500: #8c9ec5;
+  --color-shop-gray-600: #718bc2;
+  --color-shop-gray-700: #6b83b6;
+  --color-shop-gray-800: #5971a3;
+  --color-shop-gray-900: #425a8b;
+  --color-shop-gray-1000: #0e224d;
+  --color-shop-gray-1100: #253d4e;
+  --color-shop-gray-border: #d5dfe4;
+
+  --color-shop-white: #ffffff;
+  --color-shop-green: #00ff8a;
+  --color-shop-yellow: #fff500;
+  --color-shop-pink: #ff6bc4;
+  --color-shop-blue: #3aa1ff;
+  --color-shop-yellow2: #f9d915;
+  --color-shop-brown: #ab5f3e;
+  --color-shop-purple: #9c79ff;
+  --color-shop-disabled: #cad6ec;
+
+  --color-other-1: #eae4e9;
+  --color-other-2: #fff3ea;
+  --color-other-3: #fff2f3;
+  --color-other-4: #fff1f6;
+  --color-other-5: #dbece5;
+  --color-other-6: #e8fcff;
+  --color-other-7: #f0efeb;
+  --color-other-8: #dfe7fd;
+  --color-other-9: #d1ecfd;
+  --color-other-10: #ddd3fa;
+  --color-other-11: #d4f7ff;
+  --color-other-12: #d9d9d9;
+  --color-other-13: #fff4f6;
+  --color-other-14: #e0f2ee;
+  --color-other-15: #5c74a6;
+  --color-other-16: #c8dce8;
+  --color-other-17: #c4e3d6;
+  --color-other-18: #a4eee1;
+  --color-other-19: #cbe9ff;
+  --color-other-20: #ffd5c8;
+  --color-other-21: #caefdf;
+  --color-other-22: #b8f2ff;
+  --color-other-23: #f2dccb;
+  --color-other-24: #f9fafb;
+  --color-other-25: #f5f5f5;
+  --color-other-26: #fff5db;
+  --color-other-27: #f5ecdd;
+  --color-other-28: #bad0e7;
+  --color-other-29: #ffdebf;
+  --color-other-30: #d6eff2;
+  --color-other-31: #f8faff;
+  --color-other-32: #f9f9f9;
 }
 
-:lang("en") {
-    font-family: var(--font-google-inter);
+/*
+  The default border color has changed to `currentcolor` in Tailwind CSS v4,
+  so we've added these compatibility styles to make sure everything still
+  looks the same as it did with Tailwind CSS v3.
+
+  If we ever want to remove these styles, we need to add an explicit border
+  color utility to any element that depends on these defaults.
+*/
+@layer base {
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentcolor);
+  }
+}
+
+@utility container-fluid {
+  @apply px-2 md:px-4;
+}
+
+@utility containerD {
+  @apply mx-auto w-full min-w-[326px] [@media(min-width:1400px)]:min-w-[1336px] [@media(min-width:1400px)]:max-w-[1336px];
 }
 
 @layer utilities {
-    .container-fluid {
-        @apply px-2 md:px-4;
-    }
-    .containerD {
-        @apply mx-auto w-full min-w-[326px] [@media(min-width:1400px)]:min-w-[1336px] [@media(min-width:1400px)]:max-w-[1336px];
-    }
+  html {
+    font-family: var(--font-local-iranSans);
+  }
+
+  :lang('en') {
+    font-family: var(--font-google-inter);
+  }
 }

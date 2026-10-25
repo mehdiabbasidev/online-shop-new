@@ -7,13 +7,13 @@
                 @apply text-[32px] font-bold leading-[41px];
             }
             .big-banner-subtitle {
-                @apply text-[20px] font-[400] leading-[28px];
+                @apply text-[20px] font-normal leading-[28px];
             }
         }
          .box-form-newsletter {
             @apply rounded-md bg-white pl-2 pr-0 text-black;
             .input-newsletter {
-                @apply border-none text-[12px] font-[400] leading-[18px] outline-none;
+                @apply border-none text-[12px] font-normal leading-[18px] outline-hidden;
             }
         } 
     }

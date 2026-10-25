@@ -4,6 +4,6 @@
 .breadcrumb-list {
     @apply flex py-5 text-xs *:w-fit *:bg-[url('/images/bg/arrow-right.svg')] *:bg-right *:bg-no-repeat *:px-4 *:text-[#8C9EC5];
     .breadcrumb-item {
-        @apply last:bg-none [&:nth-child(1)]:text-shop-gray-1000;
+        @apply last:bg-none nth-1:text-shop-gray-1000;
     }
 }

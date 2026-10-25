@@ -1,7 +1,7 @@
 .attribute-wrapper {
     @apply flex flex-wrap justify-center gap-4 lg:flex-nowrap;
     .left-box-wrapper {
-        @apply flex min-h-[400px] w-1/2 min-w-[350px] flex-col gap-4 rounded bg-danger-50 p-12;
+        @apply flex min-h-[400px] w-1/2 min-w-[350px] flex-col gap-4 rounded-sm bg-danger-50 p-12;
         .left-box-wrapper__lable {
             @apply text-md font-bold text-warning-400;
         }
@@ -22,7 +22,7 @@
         }
     }
     .right-box-wrapper {
-        @apply flex min-h-[400px] w-1/2 min-w-[350px] rounded bg-danger-50 p-12;
+        @apply flex min-h-[400px] w-1/2 min-w-[350px] rounded-sm bg-danger-50 p-12;
     }
     .right-box {
         @apply flex flex-col gap-4;
@@ -42,6 +42,6 @@
     }
     .btn-style {
         background-color: #5bc694;
-        @apply rounded px-2.5 py-[22px] text-xxs font-normal md:text-md;
+        @apply rounded-sm px-2.5 py-[22px] text-xxs font-normal md:text-md;
     }
 }
