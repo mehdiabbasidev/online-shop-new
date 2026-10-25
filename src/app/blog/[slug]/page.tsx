@@ -4,20 +4,21 @@ import { BlogDetailsComponent } from '@/app/_components/features/blogs/blog-deta
 import BreadCrumbs from '@/app/_components/ui/bread-crumbs/bread-crumbs';
 import { BreadCrumbItem } from '@/app/_components/ui/bread-crumbs/bread-crumbs.types';
 
-export default async function BlogDetailsPage({ params }: { params: { slug: string } }) {
+export default async function BlogDetailsPage(props: { params: Promise<{ slug: string }> }) {
+    const params = await props.params;
     const blog = await fetchBlogBySlug(params.slug);
 
 
     if (!blog) {
         return notFound(); 
     }
- 
+
     const breadcrumbItems:BreadCrumbItem[]=[
         { label: "Home", url: "/" },
         { label: "blog", url: "/blog" },
         { label: blog.title, url: blog.slug }
     ]
-    
+
     return (
         <>
             <BreadCrumbs items={breadcrumbItems} />

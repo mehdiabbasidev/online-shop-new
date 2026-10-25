@@ -31,7 +31,10 @@ export function generateMetadata(): Metadata {
 }
 
 
-export default function Blog({ searchParams }: { searchParams: Record<string, string | string[] | undefined> }) {
+export default async function Blog(
+    props: { searchParams: Promise<Record<string, string | string[] | undefined>> }
+) {
+    const searchParams = await props.searchParams;
 
 
     const breadcrumbItems: BreadCrumbItem[] = [
