@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/nextjs'
 import { BlogsData } from '@/data/blogs.data'
 import { BlogCard } from './blog-card'
 

@@ -1,4 +1,4 @@
-import { Meta, StoryObj } from '@storybook/react'
+import { Meta, StoryObj } from '@storybook/nextjs'
 import BigBanner from './big-banner'
 
 const meta: Meta<typeof BigBanner> = {
