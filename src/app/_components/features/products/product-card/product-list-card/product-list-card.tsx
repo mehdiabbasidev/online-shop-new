@@ -7,7 +7,7 @@ import { IProductListCard } from "./product-list-card.types";
 export default function ProductListCard(props: IProductListCard) {
   return (
     <div className="flex items-center gap-4 p-4 border rounded-lg shadow-sm">
-      <div className="flex-shrink-0">
+      <div className="shrink-0">
         <Image
           width={120}
           height={120}
@@ -16,7 +16,7 @@ export default function ProductListCard(props: IProductListCard) {
           className="object-contain  p-1 bg-gray-50"
         />
       </div>
-      <div className="flex-grow">
+      <div className="grow">
         <Link href={`/products/${props.product_id}`}>
           <h3 className="text-lg font-semibold text-primary-600 hover:underline">
             {props.title}

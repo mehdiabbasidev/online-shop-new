@@ -28,7 +28,7 @@ export function FilterTags() {
               key={t}
               type="button"
               onClick={() => toggleCSV("tags", t)}
-              className={`rounded-md border px-3 py-1 text-sm ${active ? "bg-[#B2C2E1] text-black" : "text-[#425A8B] hover:bg-[#B2C2E1] hover:text-black"}`}
+              className={`rounded-md border px-3 py-1 text-sm ${active ? "bg-shop-gray-300 text-black" : "text-shop-gray-900 hover:bg-shop-gray-300 hover:text-black"}`}
               aria-pressed={active}
             >
               {t}

@@ -9,7 +9,7 @@ export const ProductGroup: FC<IProductGroup> = (props) => {
         <a href={`/product_groups/${slug}`} 
         className="flex w-fit flex-col items-center gap-1"
     >
-        <div className="size-28 bg-[#dbece5] rounded-full">
+        <div className="size-28 bg-other-5 rounded-full">
             <Image
                 src={`/images/product_groups/${img}`}
                 alt="Ecom"

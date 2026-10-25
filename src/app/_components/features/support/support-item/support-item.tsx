@@ -10,7 +10,7 @@ const SupportItem: React.FC<ISupportItem> = (props) => {
         <>
             {
                 <li>
-                    <div className="flex w-[251px] items-center justify-center gap-4 rounded-lg border border-[#D5DFE4] p-[15px]">
+                    <div className="flex w-[251px] items-center justify-center gap-4 rounded-lg border border-shop-gray-border p-[15px]">
                         <div className="icon-left">
                             <Image
                                 width={40}
@@ -20,10 +20,10 @@ const SupportItem: React.FC<ISupportItem> = (props) => {
                             />
                         </div>
                         <div className="info-right">
-                            <h5 className="text-md font-bold leading-[24px] text-[#425a8b]">
+                            <h5 className="text-md font-bold leading-[24px] text-shop-gray-900">
                                 {title}aaaaaaaaaaaaaaaaaa
                             </h5>
-                            <p className="text-sm font-[400] leading-[20px] text-[#8C9EC5]">
+                            <p className="text-sm font-normal leading-[20px] text-shop-gray-500">
                                 {label}
                             </p>
                         </div>

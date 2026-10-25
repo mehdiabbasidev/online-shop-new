@@ -48,7 +48,7 @@ export const Header: React.FC = () => {
                             <div className="header__search-box">
                                 <Input
                                     placeholder="search for items"
-                                    className="px-5 text-lg !text-shop-gray-300"
+                                    className="px-5 text-lg text-shop-gray-300!"
                                     compSize="md"
                                 />
                             </div>

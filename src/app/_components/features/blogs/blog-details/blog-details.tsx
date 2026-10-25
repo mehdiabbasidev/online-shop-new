@@ -17,7 +17,7 @@ export const BlogDetailsComponent: FC<IBlogDetailsProps> = (props) => {
                     <Tag tag_title={label} />
 
                     {/* blog title */}
-                    <h1 className="mb-6 mt-[15px] text-3xl font-bold leading-[41px] text-[#425a8b]">
+                    <h1 className="mb-6 mt-[15px] text-3xl font-bold leading-[41px] text-shop-gray-900">
                         {title}
                     </h1>
 
@@ -45,7 +45,7 @@ export const BlogDetailsComponent: FC<IBlogDetailsProps> = (props) => {
                         src={`/images/blog-img/${srcImage}`}
                         alt={title}
                         fill={true}
-                        className="!static h-full w-full object-cover"
+                        className="static! h-full w-full object-cover"
                     />
                 </div>
             </section>

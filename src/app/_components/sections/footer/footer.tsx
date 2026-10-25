@@ -44,7 +44,7 @@ export const Footer: React.FC = () => {
               </div>
             </li>
             <li>
-              <div className="flex w-full !gap-5 text-md">
+              <div className="flex w-full gap-5! text-md">
                 <IconFacebookGray
                   width="32"
                   height="32"

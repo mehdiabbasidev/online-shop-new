@@ -14,7 +14,7 @@ import HeaderFooter from './header-footer/header-footer'
 export const HeaderMobile: React.FC = () => {
     return (
         <>
-            <div className="absolute right-0 top-0 z-[999] w-[360px] bg-neutral-50 p-8">
+            <div className="absolute right-0 top-0 z-999 w-[360px] bg-neutral-50 p-8">
                 {/* logo && close btn */}
                 <div className="flex justify-between border-b border-shop-gray-border pb-4">
                     {/* Logo */}

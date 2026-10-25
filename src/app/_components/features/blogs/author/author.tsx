@@ -24,7 +24,7 @@ const Author: React.FC<AuthorProps> = ({
                         className="rounded-full"
                     />
                     <div>
-                        <span className="text-[#425A8B]">&nbsp;{authorName}</span>
+                        <span className="text-shop-gray-900">&nbsp;{authorName}</span>
                         <div className="avatar-details-box">
                             <span>{authorPostCount} <span>posts</span></span>
                             <span>Since <span>{authorStartDate}</span></span>
@@ -36,7 +36,7 @@ const Author: React.FC<AuthorProps> = ({
         ),
         minimal: (
             <div>
-                <span className="text-[#425A8B]">By &nbsp;{authorName}</span>
+                <span className="text-shop-gray-900">By &nbsp;{authorName}</span>
                 <div className="avatar-details-box">
                     <span>{authorPostCount} <span>posts</span></span>
                 </div>

@@ -62,7 +62,7 @@ export default async function Blog(
                 <Pagination totalItems={BlogsData.length} activePage={activePage} itemPerPage={blogsPerPage} />
             </section>
 
-            <section className="!mx-0 !w-full bg-green-200 !px-0">
+            <section className="mx-0! w-full! bg-green-200 px-0!">
                 <BigBanner />
             </section>
         </>

@@ -75,7 +75,7 @@ export default function SelectedFilterModal({
             key={i}
             type="button"
             onClick={filter.onRemove}
-            className="group inline-flex items-center gap-1 rounded-full border px-2  text-[10px] font-medium
+            className="group inline-flex items-center gap-1 rounded-full border px-2  text-3xs font-medium
                        bg-white hover:bg-slate-100 transition"
             aria-label={`Remove ${filter.label}`}
           >

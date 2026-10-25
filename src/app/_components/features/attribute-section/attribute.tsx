@@ -17,7 +17,7 @@ export const AttributeSection = () => {
                 <h3 className="left-box-wrapper__title">
                     Make Your Home Beautiful <br />
                     With
-                    <span className="text-[#5BC694]"> Green Plants</span>
+                    <span className="text-success-400"> Green Plants</span>
                 </h3>
                 {/* options */}
                 <ul className="left-box-wrapper__options mt-0 list-disc">

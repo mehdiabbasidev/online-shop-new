@@ -40,7 +40,7 @@ export default function FilterModal({ open, onClose }: Props) {
     return null;
 
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-6 overflow-auto bg-black/50">
+    <div className="fixed inset-0 z-9999 flex items-center justify-center p-6 overflow-auto bg-black/50">
       <div className="mt-10 w-full max-w-5xl overflow-hidden rounded-lg bg-white shadow-lg">
         <header className="flex items-center justify-between border-b border-border px-6 py-4">
           <div className="flex items-center gap-3">

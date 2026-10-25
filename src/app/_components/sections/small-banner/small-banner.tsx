@@ -10,7 +10,7 @@ const SmallBanner = () => {
                 <p className="small-banner-off-content">
                     Free shipping available for purchases more than $80.
                 </p>
-                <Button variant="success" className="!w-fit">
+                <Button variant="success" className="w-fit!">
                     View Products
                 </Button>
             </div>

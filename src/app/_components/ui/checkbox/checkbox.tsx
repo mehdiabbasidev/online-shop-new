@@ -33,7 +33,7 @@ export const CheckBox = forwardRef<HTMLInputElement, CheckboxProps>((props, ref)
         }
         {...rest}
       />
-      <span className="text-sm text-[#8C9EC5] peer-checked:text-black">{text}</span>
+      <span className="text-sm text-shop-gray-500 peer-checked:text-black">{text}</span>
     </label>
   );
 });
