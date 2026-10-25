@@ -14,7 +14,7 @@ const siteUrl =
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: "فروشگاه درسمن",
+    default: "فروشگاه1111 درسمن",
     template: "%s",
   },
   description: "Darsman Shop description",
